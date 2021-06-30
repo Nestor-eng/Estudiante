@@ -31,9 +31,16 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnRegistrar:
                 miIntent = new Intent(MainActivity.this,RegistrarEstudianteActivity.class);
                 break;
+            case R.id.btnConsulta:
+            miIntent = new Intent(MainActivity.this,ConsultarEstudianteActivity.class);
+            break;
+            case R.id.btnSpinner:
+                miIntent = new Intent(MainActivity.this,ConsultaComboActivity.class);
+                break;
         }
         if (miIntent != null){
             startActivity(miIntent);
         }
     }
+
 }

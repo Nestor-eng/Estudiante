@@ -25,7 +25,13 @@ public class RegistrarEstudianteActivity extends AppCompatActivity {
         apellidom = (EditText) findViewById(R.id.txtapellidoM);
         ncontrol = (EditText) findViewById(R.id.txtnControl);
         semestre = (EditText) findViewById(R.id.txtSemestre);
-
+        Button button= (Button) findViewById(R.id.btnRegistro);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                registrarEstudiante();
+            }
+        });
     }
 
     private void registrarEstudiante() {
@@ -46,7 +52,5 @@ public class RegistrarEstudianteActivity extends AppCompatActivity {
         db.close();
     }
 
-    public void guarda(View view) {
-        registrarEstudiante();
-    }
+
 }

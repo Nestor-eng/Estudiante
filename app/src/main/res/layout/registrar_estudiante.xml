@@ -16,7 +16,9 @@
         android:id="@+id/Id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="id" />
+        android:hint="id"
+        android:inputType="number"
+        />
 
     <EditText
         android:id="@+id/txtNombre"
@@ -24,42 +26,43 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Nombre(s)" />
+        android:hint="Nombre(s)"
+        android:textAllCaps="true"
+        />
     <EditText
         android:id="@+id/txtapellidoP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Apellido Paterno" />
+        android:hint="Apellido Paterno"
+        android:textAllCaps="true"
+        />
     <EditText
         android:id="@+id/txtapellidoM"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Apellido Materno" />
+        android:hint="Apellido Materno"
+        android:textAllCaps="true"
+        />
     <EditText
         android:id="@+id/txtnControl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Número de Control" />
+        android:hint="Número de Control"
+        android:inputType="number"
+        />
 
     <EditText
         android:id="@+id/txtSemestre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Semestre" />
+        android:hint="Semestre"
+        android:inputType="number"
+        />
 
     <Button
         android:id="@+id/btnRegistro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:onClick="guarda"
         android:text="Registrar Usuario" />
-    <!--<Button
-        android:id="@+id/btnRegistro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Registrar Estudiante"
-        android:layout_marginTop="30dp"
-        android:onClick="onClick"
-        />-->
 </LinearLayout>

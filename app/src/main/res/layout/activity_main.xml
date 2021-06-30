@@ -21,16 +21,18 @@
         />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnConsulta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Consultar" />
+        android:text="Consultar"
+        android:onClick="abrir"/>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Listar alumnos"
+        android:onClick="abrir"/>
 
     <Button
         android:id="@+id/button5"

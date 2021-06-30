@@ -8,6 +8,10 @@ public class Estudiante {
     private String nControl;
     private String semestre;
 
+    public Estudiante() {
+
+    }
+
     public Estudiante(Integer id, String nombre, String apellidoP, String apellidoM, String nControl, String semestre) {
         this.id = id;
         this.nombre = nombre;
