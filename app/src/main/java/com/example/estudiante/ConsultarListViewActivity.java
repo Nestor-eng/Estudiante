@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.estudiante.entidades.Estudiante;
 import com.example.estudiante.utilidades.Utilidades;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class ConsultarListViewActivity extends AppCompatActivity {
@@ -38,16 +39,16 @@ public class ConsultarListViewActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
              String informacion = "ID: "+ personasLists.get(position).getId()+"\n";
-                    informacion = "Nombre: "+ personasLists.get(position).getNombre()+"\n";
-                    informacion = "Apellido Paterno: "+ personasLists.get(position).getApellidoP()+"\n";
-                    informacion = "Apellido Materno: "+ personasLists.get(position).getApellidoM()+"\n";
-                    informacion = "Numero de Control: "+ personasLists.get(position).getnControl()+"\n";
-                    informacion = "Semestre: "+ personasLists.get(position).getSemestre()+"\n";
+                    informacion += "Nombre: "+ personasLists.get(position).getNombre()+"\n";
+                    informacion += "Apellido Paterno: "+ personasLists.get(position).getApellidoP()+"\n";
+                    informacion += "Apellido Materno: "+ personasLists.get(position).getApellidoM()+"\n";
+                    informacion += "Numero de Control: "+ personasLists.get(position).getnControl()+"\n";
+                    informacion += "Semestre: "+ personasLists.get(position).getSemestre()+"\n";
                 Toast.makeText(getApplicationContext(),informacion,Toast.LENGTH_SHORT).show();
                 Estudiante estudiante = personasLists.get(position);
                 Intent intent = new Intent(ConsultarListViewActivity.this,DetalleEstudianteActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("estudiante",estudiante);
+                bundle.putSerializable("estudiante", (Serializable) estudiante);
                 intent.putExtras(bundle);
                 startActivity(intent);
             }
